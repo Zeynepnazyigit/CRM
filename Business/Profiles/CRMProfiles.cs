@@ -25,6 +25,13 @@ namespace Business.Profiles
                 ));
 
             CreateMap<LeadCreateDTO, Lead>();
+
+            CreateMap<Lead, LeadDetailDTO>()
+                .ForMember(dest => dest.AssignedUserName, opt => opt.MapFrom(src => src.AssignedUser != null ? $"{src.AssignedUser.FirstName} {src.AssignedUser.LastName}" : null));
+
+
+            
+
         }
     }
 }

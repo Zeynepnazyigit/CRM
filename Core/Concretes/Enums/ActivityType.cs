@@ -14,7 +14,7 @@ namespace Core.Concretes.Enums
         Task= 4,
         Note= 5,
         Demo= 6,
-        FollowUp= 7
-
+        FollowUp= 7,
+        LeadCreated = 8
     }
 }
